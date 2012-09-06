@@ -47,3 +47,55 @@ http://www.javacodegeeks.com/2010/09/xmpp-im-with-smack-for-java.html
 http://today.java.net/article/2006/10/04/instant-messaging-java-made-easy-smack-api
 
 
+Tsung - XMPP Load Testing Tool
+==============================
+
+http://www.process-one.net/en/tsung/
+
+http://tsung.erlang-projects.org/
+
+http://en.wikipedia.org/wiki/Tsung
+
+https://github.com/processone/tsung
+
+
+eJabberd
+========
+
+http://www.process-one.net/en/ejabberd/
+
+http://en.wikipedia.org/wiki/Ejabberd
+
+http://www.ejabberd.im/
+
+https://github.com/processone/ejabberd
+
+
+Writing eJabberd modules
+========================
+
+http://www.process-one.net/en/wiki/ejabberd_module_development/
+
+Part 1 - http://anders.conbere.org/blog/2008/07/16/building_ejabberd_modules_-_part_1_-_compiling_erlang/
+Part 2 - http://anders.conbere.org/blog/2008/07/17/building_ejabberd_modules_-_part_2_-_generic_modules/
+Part 3 - http://anders.conbere.org/blog/2008/07/31/building_ejabberd_modules_-_part_3_-_http_modules/
+Part 4 - http://anders.conbere.org/blog/2008/08/06/building_ejabberd_modules_-_part_4_-_xmpp_bots/
+
+More XMPP stuff in his blog:
+
+http://anders.conbere.org/blog/archive/
+
+
+http://cestari.wordpress.com/2008/09/11/writing-ejabberd-modules-good-places-to-find-documentation/
+
+Even more tutorials:
+
+https://www.google.com/search?q=how+to+write+ejabberd+modules&oq=how+to+write+ejabberd+modules&sugexp=chrome,mod=0&sourceid=chrome&ie=UTF-8
+
+
+
+
+
+
+
+
