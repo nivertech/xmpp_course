@@ -94,6 +94,15 @@ https://www.google.com/search?q=how+to+write+ejabberd+modules&oq=how+to+write+ej
 
 
 
+XEP-0114: Jabber Component Protocol
+===================================
+
+http://xmpp.org/extensions/xep-0114.html
+
+http://www.quora.com/How-do-I-develop-custom-functions-on-top-of-Ejabberd/
+
+
+
 
 
 
