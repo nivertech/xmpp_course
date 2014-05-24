@@ -71,29 +71,31 @@ http://www.ejabberd.im/
 https://github.com/processone/ejabberd
 
 
-Writing eJabberd modules
+Writing ejabberd modules
 ========================
 
 http://www.process-one.net/en/wiki/ejabberd_module_development/
 
-Parts 1,2,3,4:
-- http://anders.conbere.org/
+Building ejabberd modules - Parts 1,2,3,4:
 - http://anders.conbere.org/2008/07/16/building_ejabberd_modules_-_part_1_-_compiling_erlang.html
 - http://anders.conbere.org/2008/07/17/building_ejabberd_modules_-_part_2_-_generic_modules.html
 - http://anders.conbere.org/2008/07/31/building_ejabberd_modules_-_part_3_-_http_modules.html
 - http://anders.conbere.org/2008/08/06/building_ejabberd_modules_-_part_4_-_xmpp_bots.html
 
-
 More XMPP stuff in his blog:
+- http://anders.conbere.org/
+- http://anders.conbere.org/blog/archive/
 
-http://anders.conbere.org/blog/archive/
 
+Writing Ejabberd Modules: Presence Storms	 28aug08
+- http://metajack.wordpress.com/2008/08/28/writing-ejabberd-modules-presence-storms/
 
-http://cestari.wordpress.com/2008/09/11/writing-ejabberd-modules-good-places-to-find-documentation/
+Writing ejabberd modules, good places to find documentation [Updated]
+- http://cestari.wordpress.com/2008/09/11/writing-ejabberd-modules-good-places-to-find-documentation/
+
 
 Even more tutorials:
-
-https://www.google.com/search?q=how+to+write+ejabberd+modules&oq=how+to+write+ejabberd+modules&sugexp=chrome,mod=0&sourceid=chrome&ie=UTF-8
+- https://www.google.com/search?q=how+to+write+ejabberd+modules&oq=how+to+write+ejabberd+modules&sugexp=chrome,mod=0&sourceid=chrome&ie=UTF-8
 
 
 
