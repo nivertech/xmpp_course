@@ -74,7 +74,10 @@ https://github.com/processone/ejabberd
 Writing ejabberd modules
 ========================
 
-http://www.process-one.net/en/wiki/ejabberd_module_development/
+
+ejabberd module development
+- http://www.process-one.net/en/wiki/ejabberd_module_development/
+
 
 Building ejabberd modules - Parts 1,2,3,4:
 - http://anders.conbere.org/2008/07/16/building_ejabberd_modules_-_part_1_-_compiling_erlang.html
