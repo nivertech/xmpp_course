@@ -76,10 +76,13 @@ Writing eJabberd modules
 
 http://www.process-one.net/en/wiki/ejabberd_module_development/
 
-- Part 1 - http://anders.conbere.org/blog/2008/07/16/building_ejabberd_modules_-_part_1_-_compiling_erlang/
-- Part 2 - http://anders.conbere.org/blog/2008/07/17/building_ejabberd_modules_-_part_2_-_generic_modules/
-- Part 3 - http://anders.conbere.org/blog/2008/07/31/building_ejabberd_modules_-_part_3_-_http_modules/
-- Part 4 - http://anders.conbere.org/blog/2008/08/06/building_ejabberd_modules_-_part_4_-_xmpp_bots/
+Parts 1,2,3,4:
+- http://anders.conbere.org/
+- http://anders.conbere.org/2008/07/16/building_ejabberd_modules_-_part_1_-_compiling_erlang.html
+- http://anders.conbere.org/2008/07/17/building_ejabberd_modules_-_part_2_-_generic_modules.html
+- http://anders.conbere.org/2008/07/31/building_ejabberd_modules_-_part_3_-_http_modules.html
+- http://anders.conbere.org/2008/08/06/building_ejabberd_modules_-_part_4_-_xmpp_bots.html
+
 
 More XMPP stuff in his blog:
 
