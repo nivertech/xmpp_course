@@ -55,6 +55,7 @@ To increase this limit, modify /etc/security/limits.conf:
     *  hard  nofile  1024000
 
 
+
 You need to logout and login again for the above config to take effect.
 To confirm, run ``ulimit -n``.
 
