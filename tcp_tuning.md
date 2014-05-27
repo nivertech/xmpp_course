@@ -29,6 +29,7 @@ Good read:
 
 * `Iptables tutorial <http://www.frozentux.net/iptables-tutorial/chunkyhtml/>`_
 
+
 Tune Linux for massive connections
 ----------------------------------
 
@@ -41,6 +42,7 @@ Good read:
 * `Ipsysctl tutorial <http://www.frozentux.net/ipsysctl-tutorial/chunkyhtml/>`_
 * `TCP variables <http://www.frozentux.net/ipsysctl-tutorial/chunkyhtml/tcpvariables.html>`_
 
+
 Increase open file limit
 ~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -48,12 +50,14 @@ Each connection is seen by Linux as an open file.
 The default maximum number of open file is 1024.
 To increase this limit, modify /etc/security/limits.conf:
 
+
     *  soft  nofile  1024000
     *  hard  nofile  1024000
 
 
 You need to logout and login again for the above config to take effect.
 To confirm, run ``ulimit -n``.
+
 
 Tune kernel
 ~~~~~~~~~~~
