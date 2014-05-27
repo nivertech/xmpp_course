@@ -18,10 +18,12 @@ You can update ``/etc/sysconfig/iptables`` with these commands to forward port
     iptables-save -c > /etc/sysconfig/iptables
     chmod 644 /etc/sysconfig/iptables
 
+
 Of course for example if you have Apache running on port 80 and 443, you have to stop it:
 
     sudo /etc/init.d/httpd stop
     sudo chkconfig httpd off
+
 
 Good read:
 
@@ -49,15 +51,16 @@ To increase this limit, modify /etc/security/limits.conf:
     *  soft  nofile  1024000
     *  hard  nofile  1024000
 
+
 You need to logout and login again for the above config to take effect.
 To confirm, run ``ulimit -n``.
 
 Tune kernel
 ~~~~~~~~~~~
 
-As instructed in the article
-`A Million-user Comet Application with Mochiweb <http://www.metabrew.com/article/a-million-user-comet-application-with-mochiweb-part-1>`_,
+As instructed in the article `A Million-user Comet Application with Mochiweb <http://www.metabrew.com/article/a-million-user-comet-application-with-mochiweb-part-1>`_,
 modify /etc/sysctl.conf:
+
 
     # General gigabit tuning
     net.core.rmem_max = 16777216
@@ -74,6 +77,7 @@ modify /etc/sysctl.conf:
     net.core.somaxconn = 1024
     net.ipv4.tcp_max_syn_backlog = 2048
     net.ipv4.tcp_syncookies = 1
+
 
 Run ``sudo sysctl -p`` to apply.
 No need to reboot, now your kernel should be able to handle a lot more open connections.
@@ -116,6 +120,7 @@ To tune temporarily, you can do like this:
     sudo sysctl -w net.core.somaxconn=1024
 
 
+
 HAProxy tips
 ------------
 
@@ -127,6 +132,7 @@ HAProxy is much easier to use than Nginx. It suits Xitrum because as mentioned i
 :doc:`the section about caching </cache>`, Xitrum serves static files
 `very fast <https://gist.github.com/3293596>`_. You don't have to use the static file
 serving feature in Nginx.
+
 
 Nginx tips
 ----------
@@ -145,6 +151,7 @@ returns chunked response, you need to tell Nginx to use HTTP 1.1 like this:
         proxy_set_header Connection "";
         proxy_pass http://127.0.0.1:8000;
     }
+
 
 The `documentation <http://nginx.org/en/docs/http/ngx_http_upstream_module.html#keepalive>`_ states that for http keepalive, you should also set proxy_set_header Connection "";
 
