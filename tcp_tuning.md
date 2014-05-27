@@ -8,24 +8,20 @@ You can change these ports in ``config/xitrum.conf``.
 You can update ``/etc/sysconfig/iptables`` with these commands to forward port
 80 to 8000 and 443 to 4430:
 
-::
-
-  sudo su - root
-  chmod 700 /etc/sysconfig/iptables
-  iptables-restore < /etc/sysconfig/iptables
-  iptables -A PREROUTING -t nat -i eth0 -p tcp --dport 80 -j REDIRECT --to-port 8000
-  iptables -A PREROUTING -t nat -i eth0 -p tcp --dport 443 -j REDIRECT --to-port 4430
-  iptables -t nat -I OUTPUT -p tcp -d 127.0.0.1 --dport 80 -j REDIRECT --to-ports 8000
-  iptables -t nat -I OUTPUT -p tcp -d 127.0.0.1 --dport 443 -j REDIRECT --to-ports 4430
-  iptables-save -c > /etc/sysconfig/iptables
-  chmod 644 /etc/sysconfig/iptables
+    sudo su - root
+    chmod 700 /etc/sysconfig/iptables
+    iptables-restore < /etc/sysconfig/iptables
+    iptables -A PREROUTING -t nat -i eth0 -p tcp --dport 80 -j REDIRECT --to-port 8000
+    iptables -A PREROUTING -t nat -i eth0 -p tcp --dport 443 -j REDIRECT --to-port 4430
+    iptables -t nat -I OUTPUT -p tcp -d 127.0.0.1 --dport 80 -j REDIRECT --to-ports 8000
+    iptables -t nat -I OUTPUT -p tcp -d 127.0.0.1 --dport 443 -j REDIRECT --to-ports 4430
+    iptables-save -c > /etc/sysconfig/iptables
+    chmod 644 /etc/sysconfig/iptables
 
 Of course for example if you have Apache running on port 80 and 443, you have to stop it:
 
-::
-
-  sudo /etc/init.d/httpd stop
-  sudo chkconfig httpd off
+    sudo /etc/init.d/httpd stop
+    sudo chkconfig httpd off
 
 Good read:
 
@@ -50,10 +46,8 @@ Each connection is seen by Linux as an open file.
 The default maximum number of open file is 1024.
 To increase this limit, modify /etc/security/limits.conf:
 
-::
-
-  *  soft  nofile  1024000
-  *  hard  nofile  1024000
+    *  soft  nofile  1024000
+    *  hard  nofile  1024000
 
 You need to logout and login again for the above config to take effect.
 To confirm, run ``ulimit -n``.
@@ -65,23 +59,21 @@ As instructed in the article
 `A Million-user Comet Application with Mochiweb <http://www.metabrew.com/article/a-million-user-comet-application-with-mochiweb-part-1>`_,
 modify /etc/sysctl.conf:
 
-::
-
-  # General gigabit tuning
-  net.core.rmem_max = 16777216
-  net.core.wmem_max = 16777216
-  net.ipv4.tcp_rmem = 4096 87380 16777216
-  net.ipv4.tcp_wmem = 4096 65536 16777216
-
-  # This gives the kernel more memory for TCP
-  # which you need with many (100k+) open socket connections
-  net.ipv4.tcp_mem = 50576 64768 98152
-
-  # Backlog
-  net.core.netdev_max_backlog = 2048
-  net.core.somaxconn = 1024
-  net.ipv4.tcp_max_syn_backlog = 2048
-  net.ipv4.tcp_syncookies = 1
+    # General gigabit tuning
+    net.core.rmem_max = 16777216
+    net.core.wmem_max = 16777216
+    net.ipv4.tcp_rmem = 4096 87380 16777216
+    net.ipv4.tcp_wmem = 4096 65536 16777216
+    
+    # This gives the kernel more memory for TCP
+    # which you need with many (100k+) open socket connections
+    net.ipv4.tcp_mem = 50576 64768 98152
+    
+    # Backlog
+    net.core.netdev_max_backlog = 2048
+    net.core.somaxconn = 1024
+    net.ipv4.tcp_max_syn_backlog = 2048
+    net.ipv4.tcp_syncookies = 1
 
 Run ``sudo sysctl -p`` to apply.
 No need to reboot, now your kernel should be able to handle a lot more open connections.
@@ -113,21 +105,16 @@ but you also need to tune the kernel as above.
 
 To check the backlog config:
 
-::
-
-  cat /proc/sys/net/core/somaxconn
+    cat /proc/sys/net/core/somaxconn
 
 Or:
 
-::
-
-  sysctl net.core.somaxconn
+    sysctl net.core.somaxconn
 
 To tune temporarily, you can do like this:
 
-::
+    sudo sysctl -w net.core.somaxconn=1024
 
-  sudo sysctl -w net.core.somaxconn=1024
 
 HAProxy tips
 ------------
@@ -152,12 +139,12 @@ Nginx 1.3+ supports WebSocket natively.
 Nginx by default uses HTTP 1.0 protocol for reverse proxy. If your backend server
 returns chunked response, you need to tell Nginx to use HTTP 1.1 like this:
 
-::
 
-  location / {
-    proxy_http_version 1.1;
-    proxy_set_header Connection "";
-    proxy_pass http://127.0.0.1:8000;
-  }
+    location / {
+        proxy_http_version 1.1;
+        proxy_set_header Connection "";
+        proxy_pass http://127.0.0.1:8000;
+    }
 
 The `documentation <http://nginx.org/en/docs/http/ngx_http_upstream_module.html#keepalive>`_ states that for http keepalive, you should also set proxy_set_header Connection "";
+
