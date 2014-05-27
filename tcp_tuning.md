@@ -168,6 +168,9 @@ location / {
 }
 ```
 
-The `documentation <http://nginx.org/en/docs/http/ngx_http_upstream_module.html#keepalive>`_ states that for http keepalive, you should also set proxy_set_header Connection "";
+The `documentation` - http://nginx.org/en/docs/http/ngx_http_upstream_module.html#keepalive 
+states that for http keepalive, you should also set
+
+    proxy_set_header Connection "";
 
 
