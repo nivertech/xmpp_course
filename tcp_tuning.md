@@ -50,7 +50,7 @@ Good read:
 
 
 Increase open file limit
-~~~~~~~~~~~~~~~~~~~~~~~~
+------------------------
 
 Each connection is seen by Linux as an open file.
 The default maximum number of open file is 1024.
@@ -68,7 +68,7 @@ To confirm, run `ulimit -n`.
 
 
 Tune kernel
-~~~~~~~~~~~
+-----------
 
 As instructed in the article `A Million-user Comet Application with Mochiweb` http://www.metabrew.com/article/a-million-user-comet-application-with-mochiweb-part-1 ,
 modify `/etc/sysctl.conf`:
@@ -96,8 +96,9 @@ net.ipv4.tcp_syncookies = 1
 Run `sudo sysctl -p` to apply.
 No need to reboot, now your kernel should be able to handle a lot more open connections.
 
+
 Note about backlog
-~~~~~~~~~~~~~~~~~~
+------------------
 
 TCP does the 3-way handshake for making a connection.
 When a remote client connects to the server,
@@ -168,4 +169,5 @@ location / {
 ```
 
 The `documentation <http://nginx.org/en/docs/http/ngx_http_upstream_module.html#keepalive>`_ states that for http keepalive, you should also set proxy_set_header Connection "";
+
 
