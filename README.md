@@ -53,6 +53,10 @@ http://today.java.net/article/2006/10/04/instant-messaging-java-made-easy-smack-
 Tsung - XMPP Load Testing Tool
 ==============================
 
+Tsung + MongooseIM tutorial from EUC2014
+https://github.com/nivertech/euc-2014
+
+
 http://www.process-one.net/en/tsung/
 
 http://tsung.erlang-projects.org/
