@@ -1,7 +1,7 @@
 XMPP course samples
 ===================
 
-See in `xmpp_samples` folder
+See in `xmpp_samples` folder.
 
 See:
 https://www.process-one.net/en/solutions/training/
